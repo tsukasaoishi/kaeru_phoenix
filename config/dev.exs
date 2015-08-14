@@ -26,10 +26,4 @@ config :kaeru_phoenix, KaeruPhoenix.Endpoint,
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 
-# Configure your database
-config :kaeru_phoenix, KaeruPhoenix.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
-  database: "kaeru_phoenix_dev",
-  size: 10 # The amount of database connections in the pool
+import_config "dev.secret.exs"
