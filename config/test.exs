@@ -9,6 +9,9 @@ config :kaeru_phoenix, KaeruPhoenix.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+# Set a higher stacktrace during test
+config :phoenix, :stacktrace_depth, 20
+
 # Configure your database
 config :kaeru_phoenix, KaeruPhoenix.Repo,
   adapter: Ecto.Adapters.MySQL,

@@ -9,8 +9,8 @@ use Mix.Config
 config :kaeru_phoenix, KaeruPhoenix.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "wAYPSa2IOGuoFxjiAom00qIKWnSLi0R0I984dH9Llw+NItFooGWZzeSuyqhdYHVw",
-  render_errors: [default_format: "html"],
+  secret_key_base: "JIk0YLSqcZSY0e1vI5FZ3eZgAdKiFKQAmbvxVtzm3ljpSZ3k3Szn3jUL7sdMIsC6",
+  render_errors: [accepts: ~w(html json)],
   pubsub: [name: KaeruPhoenix.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

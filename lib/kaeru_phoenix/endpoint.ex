@@ -33,7 +33,7 @@ defmodule KaeruPhoenix.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_kaeru_phoenix_key",
-    signing_salt: "6mu/GX0P"
+    signing_salt: "MFg7AUbx"
 
   plug KaeruPhoenix.Router
 end

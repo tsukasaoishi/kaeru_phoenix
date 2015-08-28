@@ -28,7 +28,7 @@ defmodule KaeruPhoenix.Web do
 
       alias KaeruPhoenix.Repo
       import Ecto.Model
-      import Ecto.Query, only: [from: 2]
+      import Ecto.Query, only: [from: 1, from: 2]
 
       import KaeruPhoenix.Router.Helpers
     end
@@ -60,7 +60,7 @@ defmodule KaeruPhoenix.Web do
 
       alias KaeruPhoenix.Repo
       import Ecto.Model
-      import Ecto.Query, only: [from: 2]
+      import Ecto.Query, only: [from: 1, from: 2]
 
     end
   end
