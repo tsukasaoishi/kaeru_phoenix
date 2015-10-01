@@ -9,7 +9,7 @@ use Mix.Config
 config :kaeru_phoenix, KaeruPhoenix.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "JIk0YLSqcZSY0e1vI5FZ3eZgAdKiFKQAmbvxVtzm3ljpSZ3k3Szn3jUL7sdMIsC6",
+  secret_key_base: "TqMAwaTjyvLiTuGMsDqYXsyM/DBHZOfHcF8CDgMVQ0VjSyxiUk9lSo7KQr/MM2k+",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: KaeruPhoenix.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -22,3 +22,8 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# Configure phoenix generators
+config :phoenix, :generators,
+  migration: true,
+  binary_id: false
