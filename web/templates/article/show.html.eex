@@ -1,2 +1,20 @@
-<h3><%= @article.title %></h3>
-<p><%= @article.content.body %></p>
+<article class="col_center" itempscope itemtype="http://schema.org/Article">
+  <header>
+    <h1 temprop="name">
+      <a href="<%= article_path(@conn, :show, @article) %>" rel="bookmark">
+        <%= @article.title %>
+      </a>
+    </h1>
+    <meta>
+      <img src="http://www.gravatar.com/avatar/76de73a1dae79a86bb99a813bd8e8e0a?s=20&d=http%3A%2F%2Fkaeruspoon%.net2F2014%2Fimages%2Fno-image.png" />
+      <span>Tsukasa OISHI</span>
+      <time itemprop="datePublished" datetime="<%= strftime(@article.publish_at, "%Y-%m-%d %H:%M:%S%z") %>">
+        <%= @article.publish_at %>
+      </time>
+    </meta>
+  </header>
+  <div class="article_context" itemprop="description">
+    <%= @article.content.body %>
+    <aside class="socialButton" data-article-id="<%= @article.id %>" />
+  </div>
+</article>
